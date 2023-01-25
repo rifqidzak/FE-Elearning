@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="card my-5">
+      <div class="card-header">
+          Dashboard
+      </div>
+      <div class="row">
+          <div class="col-md-6 p-4">
+              <div class="card">
+                  <div class="card-body">
+                      <h5 class="card-title">Enroll Class</h5>
+                      <p class="card-text">If you want to enroll the class, you can click the button below.</p>
+                      <a  routerLink ="/studyclass/student" class="card-link btn btn-outline-primary">Enroll Class</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6 p-4">
+              <div class="card">
+                  <div class="card-body">
+                      <h5 class="card-title">Study Class</h5>
+                      <p class="card-text">If you want to see the classes that you have enrolled in, you can click the button below.</p>
+                      <a  class="card-link btn btn-outline-primary"  routerLink ="/studyclass/student/detail/list/{{idUsers}}">Study Class</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

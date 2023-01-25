@@ -1,0 +1,99 @@
+<div class="container" *ngIf="quizCheck">
+  <div class="card my-5">
+    <div class="card-header mb-4">
+      {{studyClassName}} Quiz Collection
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-start mb-3">
+          <a routerLink="/collection/teacher/quiz/{{studyClassId}}" class="btn btn-secondary">Back</a>
+        </div>
+        <div class="col-md-12 mb-3">
+          <div class="card">
+            <h5 class="card-header text-center">{{collectionQuizDto.data.quizName}}</h5>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <a href="{{baseUrl}}/files/download/{{collectionQuizDto.data.fileId}}"><i
+                      class="bi bi-file-earmark-arrow-down"></i> Download Collection
+                    File</a>
+                </div>
+                <div class="col-md-6 offset-md-3 mb-3">
+                  <label for="name" class="form-label">Student Name</label>
+                  <input type="email" class="form-control" id="name" value="{{collectionQuizDto.data.studentName}}"
+                    disabled>
+                </div>
+                <form #formCollectionQuiz = 'ngForm' (ngSubmit)="formCollectionQuiz.valid && submitQuiz()" class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="note" class="form-label">Note</label>
+                    <input type="email" class="form-control" id="note" [(ngModel)]="collectionQuizUpdateReqDataDto._note" name="note">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="note" class="form-label">Score</label>
+                    <input type="number" class="form-control" id="note" max="100" min="0" [(ngModel)]="collectionQuizUpdateReqDataDto._score" name="score" required="">
+                  </div>
+
+                  <div class="col-md-12">
+                    <button type="submit" class=" btn btn-primary" id="button-submit-scoring-exam" [disabled]="formCollectionQuiz.invalid">
+                      save
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" *ngIf="examCheck">
+  <div class="card my-5">
+    <div class="card-header mb-4">
+      {{studyClassName}} Exam Collection
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-start mb-3">
+          <a routerLink="/collection/teacher/exam/{{studyClassId}}" class="btn btn-secondary">Back</a>
+        </div>
+        <div class="col-md-12 mb-3">
+          <div class="card">
+            <h5 class="card-header text-center">{{collectionExamDto.data.examName}}</h5>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <a href="{{baseUrl}}/files/download/{{collectionExamDto.data.fileId}}"><i
+                      class="bi bi-file-earmark-arrow-down"></i> Download Collection
+                    File</a>
+                </div>
+                <div class="col-md-6 offset-md-3 mb-3">
+                  <label for="name" class="form-label">Student Name</label>
+                  <input type="email" class="form-control" id="name" value="{{collectionExamDto.data.studentName}}"
+                    disabled>
+                </div>
+                <form #formCollectionExam = 'ngForm' (ngSubmit)="formCollectionExam.valid && submitExam()" class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="note" class="form-label">Note</label>
+                    <input type="email" class="form-control" id="note" [(ngModel)]="collectionExamUpdateReqDataDto._note" name="note">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="note" class="form-label">Score</label>
+                    <input type="number" class="form-control" id="note" max="100" min="0" [(ngModel)]="collectionExamUpdateReqDataDto._score" name="score" required="">
+                  </div>
+
+                  <div class="col-md-12">
+                    <button type="submit" class=" btn btn-primary" id="button-submit-scoring-exam" [disabled]="formCollectionExam.invalid">
+                      save
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="card my-5">
+      <div class="card-header mb-4">
+          {{studyClassName}}
+      </div>
+      <div class="container text-center">
+          <div class="row">
+              <div class="col-md-12 text-start mb-3">
+                  <a routerLink="/studyclass/student/detail/list/{{userId}}" class="btn btn-secondary">Back</a>
+              </div>
+              <div class="col-md-6 mb-3">
+                  <div class="card">
+                      <h5 class="card-header">Theory</h5>
+                      <div class="card-body">
+                          <p class="card-text pt-2">You can download theory and attendance theory by clicking the
+                              button below.
+                          </p>
+                          <button type="button" class="btn btn-primary" id="button-theory" routerLink="/theory/student/{{studyClassDetailId}}">
+                              View Theory
+                          </button>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                  <div class="card">
+                      <h5 class="card-header">Quiz</h5>
+                      <div class="card-body">
+                          <p class="card-text pt-2">You can download quiz and attendance quiz by clicking the
+                              button below.
+                          </p>
+                          <button type="button" class="btn btn-primary" id="button-quiz" routerLink="/quiz/student/{{studyClassDetailId}}">
+                              View Quiz
+                          </button>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                  <div class="card">
+                      <h5 class="card-header">Exam</h5>
+                      <div class="card-body">
+                          <p class="card-text pt-2">You can download exam and attendance exam by clicking the
+                              button below.
+                          </p>
+                          <button type="button" class="btn btn-primary" id="button-exam" routerLink="/exam/student/{{studyClassDetailId}}">
+                              View Exam
+                          </button>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                  <div class="card">
+                      <h5 class="card-header">Forum</h5>
+                      <div class="card-body">
+                          <p class="card-text pt-2">You can see list of the forum by clicking the
+                              button below.
+                          </p>
+                          <button type="button" class="btn btn-primary" id="button-forum" routerLink="/forum/student/{{studyClassDetailId}}">
+                              View Forum
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

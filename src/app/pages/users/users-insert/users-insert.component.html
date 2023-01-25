@@ -1,0 +1,52 @@
+<div class="container my-5">
+  <div class="card mt-3">
+      <div class="card-header">
+          Insert Users
+      </div>
+      <div class="card-body">
+          <form>
+              <a routerLink="/users" class="btn btn-outline-secondary mb-3">Back</a>
+              <div class="row">
+                  <div class="col-md-6">
+                      <div class="mb-3">
+                          <label for="fullNameUser" class="form-label">Full Name <span
+                                  class="text-danger">*</span></label>
+                          <input type="text" class="form-control" id="fullNameUser" maxlength="50" required>
+                      </div>
+                  </div>
+
+                  <div class="col-md-6">
+                      <div class="mb-3">
+                          <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                          <input type="email" class="form-control" id="email" maxlength="50" required>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="mb-3">
+                          <label for="roleId" class="form-label">Role User <span
+                                  class="text-danger">*</span></label>
+                          <select class="form-select form-select mb-3" id="roleId" required>
+                              <option selected value="0">Open this for Pick Your Role</option>
+                              <option value="1">SuperAdmin</option>
+                              <option value="2">Student</option>
+                              <option value="3">Teacher</option>
+                          </select>
+                      </div>
+
+                  </div>
+                  <div class="col-md-6">
+                      <div class="mb-3">
+                          <label for="fileInsertReqDto" class="form-label">Input Photo</label>
+                          <input class="form-control" type="file" id="fileInsertReqDto">
+                      </div>
+                  </div>
+
+                  <div class="col-md-12">
+                      <button type="button" class="btn btn-primary"
+                          id="button-submit-insert-users" routerLink = "/users">Submit</button>
+                  </div>
+              </div>
+          </form>
+      </div>
+  </div>
+</div>

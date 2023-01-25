@@ -1,0 +1,158 @@
+<div class="container" *ngIf="theoryCheck">
+  <div class="card my-5">
+    <div class="card-header mb-4">
+      {{studyClassName}} Theory
+    </div>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-12 text-start mb-3">
+          <a routerLink="/studyclass/teacher/detail/{{studyClassId}}" class="btn btn-secondary">Back</a>
+        </div>
+        <ng-container *ngFor="let data of attendanceTheorysDto.data">
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <h5 class="card-header">{{data.theoryName}}</h5>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <h6 class="card-text pt-2">Student Name:</h6>
+                    <h6 class="card-text">{{data.studentName}}</h6>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <h6 class="card-text pt-2">Attend Time:</h6>
+                    <h6 class="card-text">{{data.attendTime|date:'mediumDate'}}</h6>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <h6 class="card-text pt-2">Start At:</h6>
+                    <h6 class="card-text">{{data.startTheory|date:'mediumDate'}}</h6>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <h6 class="card-text pt-2">Finish On:</h6>
+                    <h6 class="card-text">{{data.finishTheory|date:'mediumDate'}}</h6>
+                  </div>
+
+                  <div class="col-md-6 offset-3 mb-3">
+                    <h6 class="card-text pt-2">Approve:</h6>
+                    <h6 class="card-text">{{data.approve}}</h6>
+                  </div>
+
+                  <div class="col-md-12">
+                    <button type="button" class="btn btn-primary" (click)="clickApprovingTheory(data.id, data.ver) " [hidden]="data.approve">
+                      Approve
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" *ngIf="quizCheck">
+  <div class="card my-5">
+    <div class="card-header mb-4">
+      {{studyClassName}} Quiz
+    </div>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-12 text-start mb-3">
+          <a routerLink="/studyclass/teacher/detail/{{studyClassId}}" class="btn btn-secondary">Back</a>
+        </div>
+        <ng-container *ngFor="let data of attendanceQuizsDto.data">
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <h5 class="card-header">{{data.quizName}}</h5>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <h6 class="card-text pt-2">Student Name:</h6>
+                    <h6 class="card-text">{{data.studentName}}</h6>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <h6 class="card-text pt-2">Attend Time:</h6>
+                    <h6 class="card-text">{{data.attendTime|date:'mediumDate'}}</h6>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <h6 class="card-text pt-2">Start At:</h6>
+                    <h6 class="card-text">{{data.startQuiz|date:'mediumDate'}}</h6>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <h6 class="card-text pt-2">Finish On:</h6>
+                    <h6 class="card-text">{{data.finishQuiz|date:'mediumDate'}}</h6>
+                  </div>
+
+                  <div class="col-md-6 offset-3 mb-3">
+                    <h6 class="card-text pt-2">Approve:</h6>
+                    <h6 class="card-text">{{data.approve}}</h6>
+                  </div>
+
+                  <div class="col-md-12">
+                    <button type="button" class="btn btn-primary" (click)="clickApprovingQuiz(data.id, data.ver)" [hidden]="data.approve">
+                      Approve
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" *ngIf="examCheck">
+  <div class="card my-5">
+    <div class="card-header mb-4" >
+      {{studyClassName}} Exam
+    </div>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-12 text-start mb-3">
+          <a routerLink="/studyclass/teacher/detail/{{studyClassId}}" class="btn btn-secondary">Back</a>
+        </div>
+        <ng-container *ngFor="let data of attendanceExamsDto.data">
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <h5 class="card-header">{{data.examName}}</h5>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <h6 class="card-text pt-2">Student Name:</h6>
+                    <h6 class="card-text">{{data.studentName}}</h6>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <h6 class="card-text pt-2">Attend Time:</h6>
+                    <h6 class="card-text">{{data.attendTime|date:'mediumDate'}}</h6>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <h6 class="card-text pt-2">Start At:</h6>
+                    <h6 class="card-text">{{data.startExam|date:'mediumDate'}}</h6>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <h6 class="card-text pt-2">Finish On:</h6>
+                    <h6 class="card-text">{{data.finishExam|date:'mediumDate'}}</h6>
+                  </div>
+
+                  <div class="col-md-6 offset-3 mb-3">
+                    <h6 class="card-text pt-2">Approve:</h6>
+                    <h6 class="card-text">{{data.approve}}</h6>
+                  </div>
+
+                  <div class="col-md-12">
+                    <button type="button" class="btn btn-primary" (click)="clickApprovingExam(data.id, data.ver)"  [hidden]="data.approve">
+                      Approve
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

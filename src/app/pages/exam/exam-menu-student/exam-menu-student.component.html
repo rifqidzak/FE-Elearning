@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="card my-5">
+      <div class="card-header mb-4">
+          {{studyClassName}} Exam
+      </div>
+      <div class="container text-center">
+          <div class="row">
+              <div class="col-md-12 text-start mb-3">
+                  <a routerLink="/studyclass/student/detail/menu/{{studyClassDetailId}}" class="btn btn-secondary">Back</a>
+              </div>
+              <div class="col-md-6 mb-3">
+                  <div class="card">
+                      <h5 class="card-header">List Attendance of Exam </h5>
+                      <div class="card-body">
+                          <p class="card-text pt-2">You can see list attendance of exam by clicking the button
+                              below.
+                          </p>
+                          <button type="button" class="btn btn-primary" id="button-list-attendance-exam" routerLink="/attendance/student/exam/{{studyClassDetailId}}">
+                              View Attendance
+                          </button>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-md-6 mb-3">
+                  <div class="card">
+                      <h5 class="card-header">List of Exam</h5>
+                      <div class="card-body">
+                          <p class="card-text pt-2">You can see the exam by clicking the button below.
+                          </p>
+                          <button type="button" class="btn btn-primary" id="button-list-exam" routerLink="/collection/student/exam/{{studyClassDetailId}}">
+                              View Exam
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

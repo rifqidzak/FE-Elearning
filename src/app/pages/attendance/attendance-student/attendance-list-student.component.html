@@ -1,0 +1,128 @@
+<div class="container" *ngIf="theoryCheck">
+  <div class="card my-5">
+    <div class="card-header mb-4">
+      {{studyClassName}} Theory
+    </div>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-12 text-start mb-3">
+          <a routerLink="/theory/student/{{studyClassDetailId}}" class="btn btn-secondary">Back</a>
+        </div>
+
+        <ng-container *ngFor="let data of scheduleTheoriesDto.data" >
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <h5 class="card-header">{{data.theoryName}} </h5>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <h6 class="card-text pt-2">Start at : </h6>
+                    <h6 class="card-text">{{data.startTheory|date:'mediumDate'}}</h6>
+
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <h6 class="card-text pt-2">Finish On : </h6>
+                    <h6 class="card-text">{{data.finishTheory|date:'mediumDate'}}</h6>
+                  </div>
+
+                  <div class="col-md-12">
+                    <button type="button" class="btn btn-primary" (click)="clickAttendTheory(data.id)">
+                      Attend
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" *ngIf="quizCheck">
+  <div class="card my-5">
+    <div class="card-header mb-4">
+      {{studyClassName}} Quiz
+    </div>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-12 text-start mb-3">
+          <a routerLink="/quiz/student/{{studyClassDetailId}}" class="btn btn-secondary">Back</a>
+        </div>
+
+        <ng-container *ngFor="let data of scheduleQuizsDto.data" >
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <h5 class="card-header">{{data.quizName}} </h5>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <h6 class="card-text pt-2">Start at : </h6>
+                    <h6 class="card-text">{{data.startQuiz|date:'mediumDate'}}</h6>
+
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <h6 class="card-text pt-2">Finish On : </h6>
+                    <h6 class="card-text">{{data.finishQuiz|date:'mediumDate'}}</h6>
+                  </div>
+
+                  <div class="col-md-12">
+                    <button type="button" class="btn btn-primary" (click)="clickAttendQuiz(data.id)">
+                      Attend
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" *ngIf="examCheck">
+  <div class="card my-5">
+    <div class="card-header mb-4">
+      {{studyClassName}} Exam
+    </div>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-12 text-start mb-3">
+          <a routerLink="/exam/student/{{studyClassDetailId}}" class="btn btn-secondary">Back</a>
+        </div>
+
+        <ng-container *ngFor="let data of scheduleExamsDto.data" >
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <h5 class="card-header">{{data.examName}} </h5>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <h6 class="card-text pt-2">Start at : </h6>
+                    <h6 class="card-text">{{data.startExam|date:'mediumDate'}}</h6>
+
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <h6 class="card-text pt-2">Finish On : </h6>
+                    <h6 class="card-text">{{data.finishExam|date:'mediumDate'}}</h6>
+                  </div>
+
+                  <div class="col-md-12">
+                    <button type="button" class="btn btn-primary" (click)="clickAttendExam(data.id)">
+                      Attend
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

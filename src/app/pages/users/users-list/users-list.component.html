@@ -1,0 +1,187 @@
+<div class="container my-5">
+  <div class="card mt-3">
+      <div class="card-header">
+          List Users
+      </div>
+      <div class="card-body">
+          <a class="btn btn-primary" routerLink="/users/insert"><i class="bi bi-plus-square"> Insert Users</i></a>
+          <div class="table-responsive">
+              <table class="table">
+                  <thead >
+                      <tr>
+                          <th>
+                              #
+                          </th>
+                          <th>
+                              Name
+                          </th>
+                          <th>
+                              Email
+                          </th>
+                          <th>
+                              Role
+                          </th>
+                          <th>
+                              Is Active
+                          </th>
+                          <th>
+                              Action
+                          </th>
+                      </tr>
+                  </thead>
+
+                  <tbody >
+                      <tr>
+                          <td>
+                              1
+                          </td>
+                          <td>
+                              Muhammad Rifqi Dzaky Siara
+                          </td>
+                          <td>
+                              rifdzak@gmail.com
+                          </td>
+                          <td>
+                              ROL01
+                          </td>
+                          <td>
+                              True
+                          </td>
+                          <td>
+                              <div class="btn-group" role="group" aria-label="Basic example">
+                                  <button type="button" class="button-edit-users btn btn-primary" routerLink="/users/update/1">Edit</button>
+                                  <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                      data-bs-target="#exampleModal">
+                                      Delete
+                                  </button>
+                              </div>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>
+                              2
+                          </td>
+                          <td>
+                              Mu'man Al Bajra
+                          </td>
+                          <td>
+                              bajra@bajra.com
+                          </td>
+                          <td>
+                              ROL03
+                          </td>
+                          <td>
+                              True
+                          </td>
+                          <td>
+                              <div class="btn-group" role="group" aria-label="Basic example">
+                                  <button type="button" class="button-edit-users btn btn-primary" routerLink="/users/update/1">Edit</button>
+                                  <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                      data-bs-target="#exampleModal" >
+                                      Delete
+                                  </button>
+                              </div>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>
+                              3
+                          </td>
+                          <td>
+                              Maila Sultani
+                          </td>
+                          <td>
+                              Sultani@sultani.com
+                          </td>
+                          <td>
+                              ROL03
+                          </td>
+                          <td>
+                              True
+                          </td>
+                          <td>
+                              <div class="btn-group" role="group" aria-label="Basic example">
+                                  <button type="button" class="button-edit-users btn btn-primary" routerLink="/users/update/1">Edit</button>
+                                  <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                      data-bs-target="#exampleModal">
+                                      Delete
+                                  </button>
+                              </div>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>
+                              4
+                          </td>
+                          <td>
+                              Mail Sampoerna
+                          </td>
+                          <td>
+                              sampoerna@sampoerna.com
+                          </td>
+                          <td>
+                              ROL02
+                          </td>
+                          <td>
+                              True
+                          </td>
+                          <td>
+                              <div class="btn-group" role="group" aria-label="Basic example">
+                                  <button type="button" class="button-edit-users btn btn-primary" routerLink="/users/update/1">Edit</button>
+                                  <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                      data-bs-target="#exampleModal">
+                                      Delete
+                                  </button>
+                              </div>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>
+                              5
+                          </td>
+                          <td>
+                              Nasar Alfurqon
+                          </td>
+                          <td>
+                              furqon@furqon.com
+                          </td>
+                          <td>
+                              ROL02
+                          </td>
+                          <td>
+                              True
+                          </td>
+                          <td>
+                              <div class="btn-group" role="group" aria-label="Basic example">
+                                  <button type="button" class="button-edit-users btn btn-primary" routerLink="/users/update/1">Edit</button>
+                                  <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                      data-bs-target="#exampleModal">
+                                      Delete
+                                  </button>
+                              </div>
+                          </td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Delete</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              Do you want to delete users?
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Delete</button>
+          </div>
+      </div>
+  </div>
+</div>

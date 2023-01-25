@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="card my-5">
+      <div class="card-header mb-4">
+          Enroll Class
+      </div>
+      <div class="container text-center">
+          <div class="row">
+              <div class="col-md-12 text-start mb-3">
+                  <a routerLink="/dashboard/student" class="btn btn-secondary">Back</a>
+              </div>
+              <ng-container *ngFor="let data of studyClassesDto.data">
+                <div class="col-md-4 mb-3">
+                  <div class="card">
+                      <h5 class="card-header">{{data.studyClassName}}</h5>
+                      <div class="card-body">
+                          <img src="{{BaseUrl}}/files/download/{{data.photoStudyClass}}" class="photo-class-view" alt="">
+                          <h5 class="card-title pt-2">{{data.teacherName}}</h5>
+                          <p class="card-text pt-2">{{data.description}}
+                          </p>
+                          <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                              data-bs-target="#exampleModal" (click)="clickGetStudyClassId(data.id)">
+                              Enroll class
+                          </button>
+                      </div>
+                  </div>
+              </div>
+              </ng-container>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Enroll</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              Are you sure you want to enroll in this class?
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="clickSubmitEnroll()">Yes</button>
+          </div>
+      </div>
+  </div>
+</div>

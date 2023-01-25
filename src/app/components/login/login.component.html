@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+</head>
+<body>
+    <div class="d-flex vh-100 flex-row align-items-center justify-content-center">
+        <div class="card">
+            <div class="card-body text-center">
+                <h5 class="card-title">Login</h5>
+                <form #formLogin = 'ngForm' (ngSubmit)="formLogin.valid && submit()">
+                    <div class="mb-3 text-start">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control text-center" id="email" required [(ngModel)]="loginReqDto._email" name="email">
+                    </div>
+                    <div class="text-start">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control text-center" id="password" required [(ngModel)]="loginReqDto._password" name="password">
+                    </div>
+                    <button type="submit" class="btn btn-primary m-3" id="login-admin" [disabled]="formLogin.invalid">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

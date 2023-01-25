@@ -1,0 +1,205 @@
+<div class="container my-5">
+  <div class="card mt-3">
+      <div class="card-header">
+          List Study Class
+      </div>
+      <div class="card-body">
+          <a routerLink="/studyclass/superadmin/insert" class="btn btn-primary"><i class="bi bi-plus-square"> Insert Study Class</i></a>
+          <div class="table-responsive">
+              <table class="table">
+                  <thead >
+                      <tr>
+                          <th>
+                              #
+                          </th>
+                          <th>
+                              Study Class Code
+                          </th>
+                          <th>
+                              Study Class Name
+                          </th>
+                          <th>
+                              Teacher Name
+                          </th>
+                          <th>
+                              Class Photo
+                          </th>
+                          <th>
+                              Is Active
+                          </th>
+                          <th>
+                              Action
+                          </th>
+                      </tr>
+                  </thead>
+
+                  <tbody >
+                      <tr>
+                          <td>
+                              1
+                          </td>
+                          <td>
+                              C01
+                          </td>
+                          <td>
+                              Java
+                          </td>
+                          <td>
+                              Mu'man Al Bajra
+                          </td>
+                          <td>
+                              <img src="../../../../../assets/photo/java-photo-class.png" alt="java" class="photo-class">
+                          </td>
+                          <td>
+                              True
+                          </td>
+                          <td>
+                              <div class="btn-group" role="group" aria-label="Basic example">
+                                  <button type="button" class="button-edit-study-class btn btn-primary" routerLink="/studyclass/superadmin/update/1">Edit</button>
+                                  <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                      data-bs-target="#exampleModal">
+                                      Delete
+                                  </button>
+                              </div>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>
+                              2
+                          </td>
+                          <td>
+                              C02
+                          </td>
+                          <td>
+                              Python
+                          </td>
+                          <td>
+                              Mu'man Al Bajra
+                          </td>
+                          <td>
+                              <img src="../../../../../assets/photo/python-photo-class.png" alt="python" class="photo-class" routerLink="/studyclass/superadmin/update/1">
+                          </td>
+                          <td>
+                              True
+                          </td>
+                          <td>
+                              <div class="btn-group" role="group" aria-label="Basic example">
+                                  <button type="button" class="button-edit-study-class btn btn-primary" routerLink="/studyclass/superadmin/update/1">Edit</button>
+                                  <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                      data-bs-target="#exampleModal">
+                                      Delete
+                                  </button>
+                              </div>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>
+                              3
+                          </td>
+                          <td>
+                              C03
+                          </td>
+                          <td>
+                              PHP
+                          </td>
+                          <td>
+                              Mu'man Al Bajra
+                          </td>
+                          <td>
+                              <img src="../../../../../assets/photo/php-photo-class.png" alt="php" class="photo-class">
+                          </td>
+                          <td>
+                              True
+                          </td>
+                          <td>
+                              <div class="btn-group" role="group" aria-label="Basic example">
+                                  <button type="button" class="button-edit-study-class btn btn-primary" routerLink="/studyclass/superadmin/update/1">Edit</button>
+                                  <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                      data-bs-target="#exampleModal">
+                                      Delete
+                                  </button>
+                              </div>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>
+                              4
+                          </td>
+                          <td>
+                              C04
+                          </td>
+                          <td>
+                              Java Script
+                          </td>
+                          <td>
+                              Maila Sultani
+                          </td>
+                          <td>
+                              <img src="../../../../../assets/photo/js-photo-class.png" alt="php" class="photo-class">
+                          </td>
+                          <td>
+                              True
+                          </td>
+                          <td>
+                              <div class="btn-group" role="group" aria-label="Basic example">
+                                  <button type="button" class="button-edit-study-class btn btn-primary" routerLink="/studyclass/superadmin/update/1">Edit</button>
+                                  <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                      data-bs-target="#exampleModal">
+                                      Delete
+                                  </button>
+                              </div>
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>
+                              5
+                          </td>
+                          <td>
+                              C05
+                          </td>
+                          <td>
+                              Kotlin
+                          </td>
+                          <td>
+                              Maila Sultani
+                          </td>
+                          <td>
+                              <img src="../../../../../assets/photo/kotlin-photo-class.png" alt="php" class="photo-class">
+                          </td>
+                          <td>
+                              True
+                          </td>
+                          <td>
+                              <div class="btn-group" role="group" aria-label="Basic example">
+                                  <button type="button" class="button-edit-study-class btn btn-primary" routerLink="/studyclass/superadmin/update/1">Edit</button>
+                                  <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                      data-bs-target="#exampleModal">
+                                      Delete
+                                  </button>
+                              </div>
+                          </td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Delete</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              Do you want to delete this study class?
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Delete</button>
+          </div>
+      </div>
+  </div>
+</div>

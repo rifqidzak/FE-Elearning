@@ -1,0 +1,60 @@
+<div class="container" *ngIf="quizCheck">
+  <div class="row">
+      <div class="container">
+          <div class="col-6 offset-3 mt-3">
+              <div class="card">
+                  <h5 class="card-header">{{studyClassName}} Quiz</h5>
+                  <div class="card-body">
+                      <div class="row">
+                          <div class="col-6 mb-3">
+                              <a routerLink ="/collection/student/quiz/{{studyClassId}}" class="btn btn-secondary">Back</a>
+                          </div>
+                          <form>
+                              <div class="col-12 mb-3">
+                                  <label for="file" class="form-label">File Collection</label>
+                                  <input class="form-control" type="file" id="file" (change)="fileUploadQuiz($event)">
+                              </div>
+                              <div class="col-12">
+                                  <button type="button" class="btn btn-primary" id="button-collection-submit-quiz" (click)="submitQuiz()">
+                                      Submit
+                                  </button >
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="container" *ngIf="examCheck">
+  <div class="row">
+      <div class="container">
+          <div class="col-6 offset-3 mt-3">
+              <div class="card">
+                  <h5 class="card-header">{{studyClassName}} Exam</h5>
+                  <div class="card-body">
+                      <div class="row">
+                          <div class="col-6 mb-3">
+                              <a routerLink ="/collection/student/exam/{{studyClassId}}" class="btn btn-secondary">Back</a>
+                          </div>
+                          <form>
+                              <div class="col-12 mb-3">
+                                  <label for="file" class="form-label">File Collection</label>
+                                  <input class="form-control" type="file" id="file" (change)="fileUploadExam($event)">
+                              </div>
+                              <div class="col-12">
+                                  <button type="button" class="btn btn-primary" id="button-collection-submit-exam" (click)="submitExam()">
+                                      Submit
+                                  </button >
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+

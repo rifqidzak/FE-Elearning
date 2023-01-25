@@ -1,0 +1,62 @@
+<div class="container my-5">
+  <div class="card mt-3">
+      <div class="card-header">
+          Edit Study Class
+      </div>
+      <div class="card-body">
+          <div class="container">
+              <form>
+                  <div class="row">
+                      <div class="col-md-12">
+                          <a routerLink = "/studyclass/superadmin" class="btn btn-secondary">Back</a>
+                      </div>
+                      <div class="col-md-6 mt-2">
+                          <div class="mb-3">
+                              <label for="studyClassCode" class="form-label">Study Class Code</label>
+                              <input type="text" class="form-control" id="studyClassCode" maxlength="12" required disabled value="C01">
+                          </div>
+                      </div>
+
+                      <div class="col-md-6 mt-2">
+                          <div class="mb-2">
+                              <label for="studyClassName" class="form-label">Study Class Name <span
+                                      class="text-danger">*</span></label>
+                              <input type="text" class="form-control" id="studyClassName" maxlength="30" required>
+                          </div>
+                      </div>
+
+                      <div class="col-md-4 mt-2">
+                          <div class="mb-2">
+                              <label for="studyClassDescription" class="form-label">Study Class Description</label>
+                              <input type="text" class="form-control" id="studyClassDescription" maxlength="100">
+                          </div>
+                      </div>
+
+                      <div class="col-md-4 mt-2">
+                          <div class="mb-2">
+                              <label for="teacherId" class="form-label">Teacher</label>
+                              <select class="form-select form-select mb-3" id="teacherId">
+                                  <option selected value="0">Open this for Pick Your Teacher</option>
+                                  <option value="2">Mu'man Al Bajra</option>
+                                  <option value="3">Maila Sultani</option>
+                              </select>
+                          </div>
+                      </div>
+
+                      <div class="col-md-4 mt-2">
+                          <div class="mb-2">
+                              <label for="photoStudyClass" class="form-label">Photo Class</label>
+                              <input type="file" class="form-control" id="photoStudyClass">
+                          </div>
+                      </div>
+
+                      <div class="col-md-12">
+                          <button type="button" class="btn btn-primary"
+                              id="button-submit-edit-study-class" routerLink = "/studyclass/superadmin">Submit</button>
+                      </div>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>

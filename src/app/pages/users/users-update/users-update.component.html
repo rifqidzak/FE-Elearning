@@ -1,0 +1,51 @@
+<div class="container my-5">
+  <div class="card mt-3">
+      <div class="card-header">
+          Edit Users
+      </div>
+      <div class="card-body">
+          <form>
+              <a routerLink="/users" class="btn btn-outline-secondary mb-3">Back</a>
+              <div class="row">
+                  <div class="col-md-6">
+                      <div class="mb-3">
+                          <label for="fullNameUser" class="form-label">Full Name</label>
+                          <input type="text" class="form-control" id="fullNameUser" maxlength="50"
+                              value="Muhammad Rifqi Dzaky">
+                      </div>
+                  </div>
+
+                  <div class="col-md-6">
+                      <div class="mb-3">
+                          <label for="email" class="form-label">Email</label>
+                          <input type="text" class="form-control" id="email" maxlength="50" disabled
+                              value="rifdzak@gmail.com">
+                      </div>
+                  </div>
+
+                  <div class="col-md-6">
+                      <div class="mb-3">
+                          <label for="roleId" class="form-label">Role User</label>
+                          <select class="form-select form-select mb-3" id="roleId">
+                              <option selected value="0">Open this for Pick Your Role</option>
+                              <option value="1">SuperAdmin</option>
+                              <option value="2">Customers</option>
+                              <option value="3">Pic</option>
+                          </select>
+                      </div>
+
+                  </div>
+                  <div class="col-md-6">
+                      <div class="mb-3 form-check pt-md-5">
+                          <input type="checkbox" class="form-check-input" id="isActive" checked>
+                          <label class="form-check-label" for="isActive">Is Active?</label>
+                      </div>
+                  </div>
+                  <div class="col-md-2">
+                      <button type="button" class="btn btn-primary" id="button-submit-edit-users" routerLink="/users" >Submit</button>
+                  </div>
+              </div>
+          </form>
+      </div>
+  </div>
+</div>

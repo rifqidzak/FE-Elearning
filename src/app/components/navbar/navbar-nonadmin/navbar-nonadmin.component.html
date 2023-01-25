@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-md bg-light">
+  <div class="container">
+    <a class="navbar-brand" routerLink="{{checkStudent?'/dashboard/student':'/dashboard/teacher'}}" *ngIf="checkTeacher">Home</a>
+    <a class="navbar-brand" routerLink="/dashboard/student"  *ngIf="checkStudent">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="checkStudent?'/studyclass/student/detail/list/'+idUsers:'/studyclass/teacher/'+idUsers">StudyClass</a>
+        </li>
+      </ul>
+      <div class="dropdown">
+        <button class="btn btn-secondary row" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <div class="col-md-6">
+            <i class="dropdown-item bi bi-list col-md-6">{{nameUsers}}</i>
+          </div>
+        </button>
+        <ul class="dropdown-menu text-center">
+          <li> <img src="{{BaseUrl}}/files/download/{{IdPhoto}}" id="photo-profile" alt="profile"></li>
+          <li>
+            <a class="text-dark nav-link dropdown-item mt-1" routerLink="/profiles">Profile</a>
+          </li>
+          <li><a class="dropdown-item" routerLink="/login" (click)="logout()">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

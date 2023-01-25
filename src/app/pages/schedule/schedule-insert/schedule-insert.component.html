@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="card my-5">
+      <div class="card-header mb-4">
+          Java
+      </div>
+      <div class="container">
+          <form>
+              <div class="row">
+                  <div class="col-lg-12 text-start mb-3">
+                      <a routerLink ="/schedule/1" class="btn btn-secondary">Back</a>
+                  </div>
+
+                  <div class="col-md-6 mb-3">
+                      <label for="startAt" class="form-label">Start At <span class="text-danger">*</span></label>
+                      <input type="date" id="startAt" class="form-control">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                      <label for="finishOn" class="form-label">Finish On <span class="text-danger">*</span></label>
+                      <input type="date" id="finishOn" class="form-control">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                      <label for="theoryCode" class="form-label">Theory Code <span
+                              class="text-danger">*</span></label>
+                      <input type="text" id="theoryCode" class="form-control" maxlength="12" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                      <label for="theoryName" class="form-label">Theory Name <span
+                              class="text-danger">*</span></label>
+                      <input type="text" id="theoryName" class="form-control" maxlength="30" required>
+                  </div>
+                  <div class="col-md-12 mb-3">
+                      <label for="file" class="form-label">File <span
+                          class="text-danger">*</span></label>
+                      <input type="file" id="file" class="form-control" multiple>
+                  </div>
+                  <div class="col-md-12 mb-3">
+                      <button routerLink ="/schedule/1" type="button" class="btn btn-primary" id="button-submit-theory">Submit</button>
+                  </div>
+              </div>
+          </form>
+      </div>
+  </div>
+</div>

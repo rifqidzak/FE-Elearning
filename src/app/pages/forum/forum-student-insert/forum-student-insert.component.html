@@ -1,0 +1,42 @@
+<div class="container my-5">
+  <div class="card mt-3">
+      <div class="card-header">
+          Add Forum
+      </div>
+      <div class="card-body">
+          <a class="btn btn-outline-secondary" routerLink = "/forum/student/1">Back</a>
+          <form>
+
+              <div class="row">
+                  <div class="col-md-6 mt-3">
+                      <div class="mb-3">
+                          <label for="titleForum" class="form-label">Title Forum <span
+                                  class="text-danger">*</span></label>
+                          <input type="text" class="form-control" id="titleForum" maxlength="40" required>
+                      </div>
+                  </div>
+
+                  <div class="col-md-6 mt-3">
+                      <div class="mb-3">
+                          <label for="studyClassDetailId" class="form-label">Class Name <span
+                                  class="text-danger">*</span></label>
+                          <input type="text" class="form-control" id="studyClassDetailId" maxlength="40" disabled value="Java">
+                      </div>
+                  </div>
+
+                  <div class="col-md-12 mt-3">
+                      <label for="bodyForum" class="mt-1 mb-1">Body Forum <span
+                          class="text-danger">*</span></label>
+                      <textarea class="form-control" id="bodyForum"></textarea>
+                  </div>
+
+                  <div class="col-md-5 mt-3">
+                      <button type="button" class="btn btn-primary"
+                          id="button-submit-insert-forum" routerLink = "/forum/student/1">Submit</button>
+                  </div>
+              </div>
+          </form>
+
+      </div>
+  </div>
+</div>

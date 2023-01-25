@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="card my-5">
+      <div class="card-header mb-4">
+          {{studyClassName}} Quiz
+      </div>
+      <div class="container text-center">
+          <div class="row">
+              <div class="col-md-12 text-start mb-3">
+                  <a routerLink="/studyclass/student/detail/menu/{{studyClassDetailId}}" class="btn btn-secondary">Back</a>
+              </div>
+              <div class="col-md-6 mb-3">
+                  <div class="card">
+                      <h5 class="card-header">List Attendance of Quiz </h5>
+                      <div class="card-body">
+                          <p class="card-text pt-2">You can see list attendance of quiz by clicking the button
+                              below.
+                          </p>
+                          <button type="button" routerLink="/attendance/student/quiz/{{studyClassDetailId}}" class="btn btn-primary" id="button-list-attendance-quiz">
+                              View Attendance
+                          </button>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-md-6 mb-3">
+                  <div class="card">
+                      <h5 class="card-header">List of Quiz</h5>
+                      <div class="card-body">
+                          <p class="card-text pt-2">You can see the quiz by clicking the button below.
+                          </p>
+                          <button type="button" class="btn btn-primary" id="button-list-quiz" routerLink="/collection/student/quiz/{{studyClassDetailId}}">
+                              View Quiz
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
